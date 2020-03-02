@@ -23,6 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       let loginViewController = loginViewSB.instantiateViewController(identifier: "LoginViewController") as? LoginViewController else { return }
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.windowScene = windowScene
+    
+//    if let _ = Auth.auth().currentUser { // checks if a user is currently logged in
+//        UIViewController.showViewController(storyboardName: "MainView", viewControllerId: "MainTabBarController")
+//    } else {
+//    UIVIewController.showViewController(storyBoardName: "LoginView", viewControllerId: "LoginViewController")
+    
     window?.rootViewController = loginViewController
     window?.makeKeyAndVisible()
   }
