@@ -12,6 +12,9 @@
 		13ABADCE240D6679003F2B20 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13ABADCD240D6679003F2B20 /* MainView.storyboard */; };
 		13ABADD0240D66C1003F2B20 /* UIViewController + Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABADCF240D66C1003F2B20 /* UIViewController + Alerts.swift */; };
 		13ABADD2240D66CF003F2B20 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABADD1240D66CF003F2B20 /* UIViewController+Navigation.swift */; };
+		13ABADD4240D6818003F2B20 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABADD3240D6818003F2B20 /* MainTabBarController.swift */; };
+		13ABADD8240D69A3003F2B20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABADD7240D69A3003F2B20 /* ProfileViewController.swift */; };
+		13ABADDA240D719B003F2B20 /* SellItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13ABADD9240D719B003F2B20 /* SellItemViewController.swift */; };
 		2EB200036ECD84E465290B25 /* Pods_Firebase_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850F8759530A5C384F66EFF2 /* Pods_Firebase_Demo.framework */; };
 		57845ACD24092D4300F35651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57845ACC24092D4300F35651 /* AppDelegate.swift */; };
 		57845ACF24092D4300F35651 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57845ACE24092D4300F35651 /* SceneDelegate.swift */; };
@@ -42,6 +45,9 @@
 		13ABADCD240D6679003F2B20 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		13ABADCF240D66C1003F2B20 /* UIViewController + Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alerts.swift"; sourceTree = "<group>"; };
 		13ABADD1240D66CF003F2B20 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		13ABADD3240D6818003F2B20 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		13ABADD7240D69A3003F2B20 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		13ABADD9240D719B003F2B20 /* SellItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemViewController.swift; sourceTree = "<group>"; };
 		57845AC924092D4300F35651 /* Firebase-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57845ACC24092D4300F35651 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57845ACE24092D4300F35651 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,7 +183,10 @@
 			children = (
 				57845AD024092D4300F35651 /* LoginViewController.swift */,
 				13ABADCF240D66C1003F2B20 /* UIViewController + Alerts.swift */,
+				13ABADD3240D6818003F2B20 /* MainTabBarController.swift */,
+				13ABADD9240D719B003F2B20 /* SellItemViewController.swift */,
 				13ABADD1240D66CF003F2B20 /* UIViewController+Navigation.swift */,
+				13ABADD7240D69A3003F2B20 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -364,10 +373,13 @@
 			files = (
 				13ABADD0240D66C1003F2B20 /* UIViewController + Alerts.swift in Sources */,
 				57845AD124092D4300F35651 /* LoginViewController.swift in Sources */,
+				13ABADD8240D69A3003F2B20 /* ProfileViewController.swift in Sources */,
+				13ABADD4240D6818003F2B20 /* MainTabBarController.swift in Sources */,
 				57845ACD24092D4300F35651 /* AppDelegate.swift in Sources */,
 				57845AF124092DBB00F35651 /* GradientView.swift in Sources */,
 				13ABADD2240D66CF003F2B20 /* UIViewController+Navigation.swift in Sources */,
 				57845AF324092DDC00F35651 /* DesignableView.swift in Sources */,
+				13ABADDA240D719B003F2B20 /* SellItemViewController.swift in Sources */,
 				1312185C2409753C004FE190 /* AuthenticationSession.swift in Sources */,
 				57845ACF24092D4300F35651 /* SceneDelegate.swift in Sources */,
 			);
