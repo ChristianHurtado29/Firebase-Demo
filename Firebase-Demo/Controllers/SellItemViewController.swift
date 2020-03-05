@@ -11,6 +11,9 @@ import UIKit
 class SellItemViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    // data for collectionView
+    private var categories = Category.getCategories()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +26,16 @@ class SellItemViewController: UIViewController {
 
 extension SellItemViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as? CategoryCell else {
+            fatalError("oops")
+        }
+        let category = categories[indexPath.row]
+        cell.configureCell(for: category)
+        
         return cell
     }
     
@@ -40,7 +48,7 @@ extension SellItemViewController: UICollectionViewDelegateFlowLayout{
         let spacingBetweenItems: CGFloat = 11
         let numberOfItems: CGFloat = 3
         let totalSpacing: CGFloat = (2 * spacingBetweenItems) + (numberOfItems - 1) * spacingBetweenItems
-        let itemWidth: CGFloat = maxSize.width - totalSpacing / numberOfItems
+        let itemWidth: CGFloat = (maxSize.width - totalSpacing) / numberOfItems
         let itemHeight: CGFloat = maxSize.height * 0.2 // 20% of height
         return CGSize(width: itemWidth, height: itemHeight)
     }
@@ -50,6 +58,14 @@ extension SellItemViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: segue to CreateItemViewController
+                let mainViewSB = UIStoryboard(name: "MainView", bundle: nil)
+                let category = categories[indexPath.row]
+                let createItemVC = mainViewSB.instantiateViewController(identifier: "CreateItemViewController") { coder in
+                    return CreateItemViewController(coder: coder, category: category)
+                }
+                // present in a navigation controller
+                print("hello hello")
+                present(UINavigationController(rootViewController: createItemVC), animated: true)
     }
+
 }
